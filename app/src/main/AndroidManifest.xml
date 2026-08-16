@@ -66,7 +66,7 @@
             android:screenOrientation="landscape"/>
         <activity
             android:label="@string/app_name"
-            android:name="android.media.ViviTV.Pre_launcher"
+            android:name="android.media.ViviTV.activity.DeviceMacActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="landscape"

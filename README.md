@@ -43,3 +43,11 @@ A sequência recomendada é validar a execução em um dispositivo ou emulador a
 ## Aviso de direitos
 
 Este repositório não declara licença sobre o aplicativo, seus assets ou bibliotecas de terceiros. Ele deve ser usado somente quando houver autorização para analisar, modificar e redistribuir o software e os materiais envolvidos. Cada dependência ou recurso mantido no projeto deve ser revisado quanto à licença antes de qualquer distribuição pública.
+
+## Alteração em andamento: identificação por aparelho
+
+A tela de usuário e senha foi substituída por uma tela que exibe o identificador do aparelho no formato `XX:XX:XX:XX:XX:XX`. O usuário pode copiar esse valor e cadastrá-lo manualmente no painel. As rotas antigas `LoginActivity` e `LoginLandActivity` agora apontam para a mesma tela de identificação, e o launcher principal também foi redirecionado para ela.
+
+O valor é derivado do `ANDROID_ID` do próprio Android por SHA-256, usando os primeiros 12 caracteres hexadecimais. Assim, o aplicativo não depende do MAC físico do Wi-Fi, que pode ser ocultado ou randomizado pelo sistema. O identificador deve ser cadastrado no painel normalizado, preferencialmente sem separadores (`001122334455`), mesmo que a tela o apresente com dois-pontos para facilitar a leitura.
+
+> A persistência após desinstalação e reinstalação é esperada no mesmo perfil do mesmo aparelho enquanto o `ANDROID_ID` permanecer igual. Ela não pode ser garantida depois de reset de fábrica, troca de perfil/usuário, alteração de assinatura ou políticas específicas do fabricante. O MAC físico real não é uma solução confiável para esse requisito em Android moderno.

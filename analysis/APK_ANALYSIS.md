@@ -72,3 +72,9 @@ A configuração Gradle exportada ainda contém `dependencies { // TODO: depende
 O primeiro ciclo deve priorizar a obtenção de uma compilação limpa e de uma instalação assinada de desenvolvimento. Em seguida, recomenda-se reconstruir o fluxo de entrada e configuração, isolar o player e a camada de rede, substituir permissões não utilizadas, bloquear cleartext quando o backend permitir, revisar componentes exportados e criar uma camada de configuração que não dependa de valores hardcoded.
 
 Depois da estabilização técnica, as melhorias de produto podem ser implementadas incrementalmente. Cada mudança deve registrar a tela afetada, a API ou contrato de dados envolvido, o comportamento anterior, o comportamento esperado e um teste manual ou automatizado de regressão.
+
+## Implementação da identificação por aparelho
+
+A primeira alteração de produto substitui as rotas de usuário e senha por `DeviceMacActivity`. Essa Activity calcula um identificador de 48 bits a partir do `Settings.Secure.ANDROID_ID`, usando SHA-256 e formatando os primeiros 12 caracteres hexadecimais como `XX:XX:XX:XX:XX:XX`. O botão de cópia coloca o valor no clipboard para cadastro manual no painel.
+
+O campo de integração correspondente preserva o nome histórico `mac_di`, e o painel deve comparar o valor de forma normalizada, removendo `:` e `-` e usando letras maiúsculas. A tela não tenta ler o MAC físico do Wi-Fi, pois essa informação é restrita ou randomizada em vários cenários do Android moderno. A estratégia é adequada para reinstalação no mesmo perfil e aparelho, mas não promete estabilidade após reset de fábrica, mudança de usuário/perfil, alteração de assinatura ou políticas específicas do fabricante.
