@@ -61,3 +61,7 @@ A reconstrução do restante do aplicativo foi mantida a partir dos DEX e recurs
 ## Correção da inicialização — variante v2
 
 A primeira variante não iniciou em alguns ambientes porque o manifesto ainda apontava para o Application customizado/protegido recuperado do APK original. A variante v2 remove essa declaração do ponto de entrada, mantém a tela `DeviceMacActivity` como launcher e abre diretamente a Home ao tocar em Continuar. O APK v2 foi alinhado, assinado e verificado com as assinaturas Android v1, v2 e v3.
+
+## Nova base limpa
+
+Como o bytecode recuperado apresentou `java.lang.VerifyError` no Firebase/`classes2.dex`, foi criada a pasta `clean-app/` com um aplicativo Android novo, sem reutilizar as classes ofuscadas. Essa base reaproveita o fundo, o logo, o ícone e os assets de menu recuperáveis, exibe o MAC do aparelho sem usuário e senha e possui uma Home própria com os módulos visuais de canais, filmes, séries, favoritos, pesquisa e configurações. Os módulos de conteúdo serão integrados posteriormente por APIs autorizadas, em vez de tentar reempacotar o bytecode inválido.
