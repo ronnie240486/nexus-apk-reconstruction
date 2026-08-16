@@ -57,3 +57,7 @@ O valor é derivado do `ANDROID_ID` do próprio Android por SHA-256, usando os p
 Foi gerada uma variante de teste `nexus-mac-test.apk` a partir do APK original, com o launcher apontando para a tela de identificação e o botão Continuar abrindo diretamente `HomeActivity`. O artefato é assinado com uma chave de desenvolvimento criada para testes e não deve ser usado para atualização sobre uma instalação assinada com outra chave. A assinatura de produção deverá ser feita com o keystore oficial do aplicativo.
 
 A reconstrução do restante do aplicativo foi mantida a partir dos DEX e recursos originais; por isso, esta variante deve ser validada em um dispositivo Android autorizado antes de qualquer distribuição. O APK final de teste é entregue como artefato da tarefa e não é versionado no Git devido à regra que bloqueia binários de distribuição.
+
+## Correção da inicialização — variante v2
+
+A primeira variante não iniciou em alguns ambientes porque o manifesto ainda apontava para o Application customizado/protegido recuperado do APK original. A variante v2 remove essa declaração do ponto de entrada, mantém a tela `DeviceMacActivity` como launcher e abre diretamente a Home ao tocar em Continuar. O APK v2 foi alinhado, assinado e verificado com as assinaturas Android v1, v2 e v3.
