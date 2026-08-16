@@ -1,0 +1,12 @@
+package p000;
+
+import android.media.MediaCodec;
+
+/* JADX INFO: renamed from: rz */
+/* JADX INFO: loaded from: classes2.dex */
+public final /* synthetic */ class C5338rz {
+    /* JADX WARN: Invalid debug info offset */
+    /* JADX INFO: renamed from: a */
+    public static /* bridge */ /* synthetic */ void m28064a(MediaCodec mediaCodec, int i, long j) {
+    }
+}

@@ -1,0 +1,13 @@
+package p000;
+
+import android.media.MediaCodecInfo;
+
+/* JADX INFO: renamed from: Uy */
+/* JADX INFO: loaded from: classes2.dex */
+public final /* synthetic */ class C1348Uy {
+    /* JADX WARN: Invalid debug info offset */
+    /* JADX INFO: renamed from: a */
+    public static /* bridge */ /* synthetic */ int m6431a(MediaCodecInfo.VideoCapabilities videoCapabilities) {
+        return 0;
+    }
+}

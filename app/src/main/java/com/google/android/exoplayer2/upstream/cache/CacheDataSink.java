@@ -1,0 +1,144 @@
+package com.google.android.exoplayer2.upstream.cache;
+
+import com.google.android.exoplayer2.upstream.DataSink;
+import com.google.android.exoplayer2.upstream.DataSpec;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.ReusableBufferedOutputStream;
+import com.google.android.exoplayer2.util.Util;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class CacheDataSink implements DataSink {
+    public static final int DEFAULT_BUFFER_SIZE = 20480;
+    public static final long DEFAULT_FRAGMENT_SIZE = 5242880;
+    private static final long MIN_RECOMMENDED_FRAGMENT_SIZE = 2097152;
+    private static final String TAG = "CacheDataSink";
+    private final int bufferSize;
+    private ReusableBufferedOutputStream bufferedOutputStream;
+    private final Cache cache;
+    private DataSpec dataSpec;
+    private long dataSpecBytesWritten;
+    private long dataSpecFragmentSize;
+    private File file;
+    private final long fragmentSize;
+    private OutputStream outputStream;
+    private long outputStreamBytesWritten;
+
+    public static class CacheDataSinkException extends Cache.CacheException {
+        public CacheDataSinkException(IOException iOException) {
+            super(iOException);
+        }
+    }
+
+    public CacheDataSink(Cache cache, long j) {
+        this(cache, j, DEFAULT_BUFFER_SIZE);
+    }
+
+    private void closeCurrentOutputStream() throws IOException {
+        OutputStream outputStream = this.outputStream;
+        if (outputStream == null) {
+            return;
+        }
+        try {
+            outputStream.flush();
+            Util.closeQuietly(this.outputStream);
+            this.outputStream = null;
+            File file = this.file;
+            this.file = null;
+            this.cache.commitFile(file, this.outputStreamBytesWritten);
+        } catch (Throwable th) {
+            Util.closeQuietly(this.outputStream);
+            this.outputStream = null;
+            File file2 = this.file;
+            this.file = null;
+            file2.delete();
+            throw th;
+        }
+    }
+
+    private void openNextOutputStream() throws IOException {
+        long j = this.dataSpec.length;
+        long jMin = j != -1 ? Math.min(j - this.dataSpecBytesWritten, this.dataSpecFragmentSize) : -1L;
+        Cache cache = this.cache;
+        DataSpec dataSpec = this.dataSpec;
+        this.file = cache.startFile(dataSpec.key, dataSpec.absoluteStreamPosition + this.dataSpecBytesWritten, jMin);
+        OutputStream fileOutputStream = new FileOutputStream(this.file);
+        if (this.bufferSize > 0) {
+            ReusableBufferedOutputStream reusableBufferedOutputStream = this.bufferedOutputStream;
+            if (reusableBufferedOutputStream == null) {
+                this.bufferedOutputStream = new ReusableBufferedOutputStream(fileOutputStream, this.bufferSize);
+            } else {
+                reusableBufferedOutputStream.reset(fileOutputStream);
+            }
+            fileOutputStream = this.bufferedOutputStream;
+        }
+        this.outputStream = fileOutputStream;
+        this.outputStreamBytesWritten = 0L;
+    }
+
+    @Override // com.google.android.exoplayer2.upstream.DataSink
+    public void close() throws CacheDataSinkException {
+        if (this.dataSpec == null) {
+            return;
+        }
+        try {
+            closeCurrentOutputStream();
+        } catch (IOException e) {
+            throw new CacheDataSinkException(e);
+        }
+    }
+
+    @Override // com.google.android.exoplayer2.upstream.DataSink
+    public void open(DataSpec dataSpec) throws CacheDataSinkException {
+        if (dataSpec.length == -1 && dataSpec.isFlagSet(2)) {
+            this.dataSpec = null;
+            return;
+        }
+        this.dataSpec = dataSpec;
+        this.dataSpecFragmentSize = dataSpec.isFlagSet(4) ? this.fragmentSize : Long.MAX_VALUE;
+        this.dataSpecBytesWritten = 0L;
+        try {
+            openNextOutputStream();
+        } catch (IOException e) {
+            throw new CacheDataSinkException(e);
+        }
+    }
+
+    @Override // com.google.android.exoplayer2.upstream.DataSink
+    public void write(byte[] bArr, int i, int i2) throws CacheDataSinkException {
+        if (this.dataSpec == null) {
+            return;
+        }
+        int i3 = 0;
+        while (i3 < i2) {
+            try {
+                if (this.outputStreamBytesWritten == this.dataSpecFragmentSize) {
+                    closeCurrentOutputStream();
+                    openNextOutputStream();
+                }
+                int iMin = (int) Math.min(i2 - i3, this.dataSpecFragmentSize - this.outputStreamBytesWritten);
+                this.outputStream.write(bArr, i + i3, iMin);
+                i3 += iMin;
+                long j = iMin;
+                this.outputStreamBytesWritten += j;
+                this.dataSpecBytesWritten += j;
+            } catch (IOException e) {
+                throw new CacheDataSinkException(e);
+            }
+        }
+    }
+
+    public CacheDataSink(Cache cache, long j, int i) {
+        Assertions.checkState(j > 0 || j == -1, "fragmentSize must be positive or C.LENGTH_UNSET.");
+        if (j != -1 && j < 2097152) {
+            Log.m17586w(TAG, "fragmentSize is below the minimum recommended value of 2097152. This may cause poor cache performance.");
+        }
+        this.cache = (Cache) Assertions.checkNotNull(cache);
+        this.fragmentSize = j == -1 ? Long.MAX_VALUE : j;
+        this.bufferSize = i;
+    }
+}

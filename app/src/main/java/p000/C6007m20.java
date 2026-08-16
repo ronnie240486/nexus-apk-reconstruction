@@ -1,0 +1,13 @@
+package p000;
+
+import android.view.View;
+
+/* JADX INFO: renamed from: m20, reason: case insensitive filesystem */
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class C6007m20 {
+    /* JADX WARN: Invalid debug info offset */
+    /* JADX INFO: renamed from: a */
+    public static /* bridge */ /* synthetic */ boolean m22041a(View view, int i, int i2, int i3, int i4, int[] iArr) {
+        return false;
+    }
+}

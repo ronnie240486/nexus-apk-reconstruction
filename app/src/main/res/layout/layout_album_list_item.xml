@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_selected_mark"
+        android:layout_width="@dimen/dimen_10dp_sw_320_dp"
+        android:layout_height="@dimen/dimen_10dp_sw_320_dp"
+        android:layout_margin="@dimen/dimen_8dp_sw_320_dp"
+        android:src="?attr/drawableAlbumListItemPlaying"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name"/>
+    <TextView
+        android:textSize="@dimen/dimen_10sp_sw_320_dp"
+        android:textColor="?attr/colorAlbumListItem"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_name_layout_album_list_item"
+        android:paddingLeft="@dimen/dimen_8dp_sw_320_dp"
+        android:paddingTop="@dimen/dimen_8dp_sw_320_dp"
+        android:paddingRight="@dimen/dimen_8dp_sw_320_dp"
+        android:paddingBottom="@dimen/dimen_8dp_sw_320_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:singleLine="true"
+        android:layout_toEndOf="@+id/iv_selected_mark"/>
+</RelativeLayout>

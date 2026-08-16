@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:RoundedImageView="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/selector_home_recycler_item"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_main_layout_home_item_teleplay_with_episode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        RoundedImageView:riv_corner_radius="@dimen/dimen_4dp_sw_320_dp"/>
+    <TextView
+        android:textSize="@dimen/dimen_10sp_sw_320_dp"
+        android:textColor="?attr/colorHomeDisplayItemTitle"
+        android:id="@+id/tv_info_layout_home_item_teleplay_with_episode"
+        android:background="@drawable/drawable_bg_black_half_transparent"
+        android:paddingLeft="@dimen/dimen_4dp_sw_320_dp"
+        android:paddingRight="@dimen/dimen_4dp_sw_320_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_2dp_sw_320_dp"
+        android:layout_marginBottom="@dimen/dimen_2dp_sw_320_dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_alignParentBottom="true"/>
+    <TextView
+        android:textSize="@dimen/dimen_10sp_sw_320_dp"
+        android:textColor="?attr/colorHomeDisplayItemGrade"
+        android:id="@+id/tv_grade_layout_home_item_teleplay_with_episode"
+        android:background="@drawable/drawable_bg_black_half_transparent"
+        android:paddingLeft="@dimen/dimen_4dp_sw_320_dp"
+        android:paddingRight="@dimen/dimen_4dp_sw_320_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_2dp_sw_320_dp"
+        android:layout_marginBottom="@dimen/dimen_2dp_sw_320_dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

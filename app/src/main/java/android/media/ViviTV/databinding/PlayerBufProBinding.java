@@ -1,0 +1,56 @@
+package android.media.ViviTV.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class PlayerBufProBinding implements ViewBinding {
+
+    /* JADX INFO: renamed from: a */
+    @NonNull
+    public final ProgressBar f7459a;
+
+    /* JADX WARN: Invalid debug info offset */
+    public PlayerBufProBinding(@NonNull ProgressBar progressBar) {
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @NonNull
+    /* JADX INFO: renamed from: a */
+    public static PlayerBufProBinding m11801a(@NonNull View view) {
+        return null;
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @NonNull
+    /* JADX INFO: renamed from: c */
+    public static PlayerBufProBinding m11802c(@NonNull LayoutInflater layoutInflater) {
+        return null;
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @NonNull
+    /* JADX INFO: renamed from: d */
+    public static PlayerBufProBinding m11803d(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z) {
+        return null;
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @NonNull
+    /* JADX INFO: renamed from: b */
+    public ProgressBar m11804b() {
+        return null;
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public View getRoot() {
+        return null;
+    }
+}

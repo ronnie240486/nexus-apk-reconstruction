@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.media.ViviTV.widget.ExtendedRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:PageIndicatorView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_main"
+    android:background="@drawable/selector_home_recycler_item_banner_pager"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.leochuan.AutoPlayRecyclerView
+        android:id="@+id/rv_banner_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.p010rd.PageIndicatorView
+        android:id="@+id/page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_8dp_sw_320_dp"
+        android:layout_alignBottom="@+id/rv_banner_pager"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        PageIndicatorView:piv_animationType="none"
+        PageIndicatorView:piv_selectedColor="#fa600a"
+        PageIndicatorView:piv_unselectedColor="#ffffff"/>
+</android.media.ViviTV.widget.ExtendedRelativeLayout>

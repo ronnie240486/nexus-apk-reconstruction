@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_league_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:textSize="@dimen/dimen_8dp_sw_320_dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/tv_no_data"
+        android:background="@drawable/bg_league_table_item_or_match_item"
+        android:padding="@dimen/dimen_4dp_sw_320_dp"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_27dp_sw_320_dp"
+        android:text="@string/live_channellist_layout_empty_txt"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

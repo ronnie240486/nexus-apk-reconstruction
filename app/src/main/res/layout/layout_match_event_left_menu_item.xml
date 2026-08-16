@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_league_left_menu_item"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="?attr/colorLiveChannelWindowListItemPlayingNot"
+        android:gravity="center"
+        android:id="@+id/tv_match_event_menu_date"
+        android:layout_width="@dimen/dimen_150dp_sw_320_dp"
+        android:layout_height="70dp"
+        android:text="09/20"/>
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/dimen_8dp_sw_320_dp"
+    android:paddingRight="@dimen/dimen_8dp_sw_320_dp"
+    android:paddingBottom="@dimen/dimen_12dp_sw_320_dp">
+    <item>
+        <shape>
+            <solid android:color="#33000000"/>
+            <corners
+                android:bottomLeftRadius="@dimen/dimen_8dp_sw_320_dp"
+                android:bottomRightRadius="@dimen/dimen_8dp_sw_320_dp"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="bottom|center_horizontal"
+        android:left="@dimen/dimen_10dp_sw_320_dp"
+        android:right="@dimen/dimen_10dp_sw_320_dp"
+        android:bottom="@dimen/dimen_10dp_sw_320_dp">
+        <shape>
+            <solid android:color="#80000000"/>
+            <corners
+                android:bottomLeftRadius="@dimen/dimen_8dp_sw_320_dp"
+                android:bottomRightRadius="@dimen/dimen_8dp_sw_320_dp"/>
+        </shape>
+    </item>
+</layer-list>

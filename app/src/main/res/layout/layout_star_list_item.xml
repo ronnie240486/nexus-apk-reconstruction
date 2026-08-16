@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_main_layout_star_list_item"
+        android:background="@drawable/selector_label_star_item"
+        android:duplicateParentState="true"
+        android:layout_width="@dimen/dimen_74dp_sw_320_dp"
+        android:layout_height="@dimen/dimen_74dp_sw_320_dp"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:textSize="@dimen/typeDetailsItem_videoName_fontSize"
+        android:textColor="?attr/colorVideoDetailsSummary"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:id="@+id/tv_info_layout_star_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_20dp_sw_320_dp"
+        android:layout_marginTop="@dimen/dimen_70dp_sw_320_dp"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:marqueeRepeatLimit="marquee_forever"/>
+</RelativeLayout>

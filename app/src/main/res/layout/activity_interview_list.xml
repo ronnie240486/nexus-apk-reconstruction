@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_main"
+    android:background="@drawable/ic_bg_tv_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/rl_main_title_bar_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_title_bar_common"/>
+    <org.lucasr.twowayview.widget.TwoWayView
+        android:id="@+id/two_way_view_stars"
+        android:focusable="true"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:descendantFocusability="afterDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_112dp_sw_320_dp"
+        android:layout_marginLeft="@dimen/dimen_8dp_sw_320_dp"
+        android:layout_marginRight="@dimen/dimen_8dp_sw_320_dp"
+        android:layout_marginBottom="@dimen/dimen_16dp_sw_320_dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:twowayview_layoutManager="ListLayoutManager"
+        style="@style/TwoWayView"/>
+</RelativeLayout>

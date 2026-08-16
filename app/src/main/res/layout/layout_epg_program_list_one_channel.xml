@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <GridView
+        android:id="@+id/gv_main_layout_epg_program_list_one_channel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/selector_epg_default"
+        android:numColumns="4"/>
+    <TextView
+        android:textSize="@dimen/dimen_14sp_sw_320_dp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_not_data"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/have_no_epg_info"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

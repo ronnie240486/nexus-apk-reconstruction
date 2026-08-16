@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/dimen_10dp_sw_320_dp"
+    android:paddingTop="@dimen/dimen_2dp_sw_320_dp"
+    android:paddingBottom="@dimen/dimen_2dp_sw_320_dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dimen_27dp_sw_320_dp">
+    <ImageView
+        android:id="@+id/iv_category_playing"
+        android:padding="@dimen/dimen_6dp_sw_320_dp"
+        android:visibility="gone"
+        android:layout_width="@dimen/dimen_24dp_sw_320_dp"
+        android:layout_height="@dimen/dimen_24dp_sw_320_dp"
+        android:layout_margin="@dimen/dimen_4dp_sw_320_dp"
+        android:src="@drawable/ic_program_playing"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name"/>
+    <TextView
+        android:textSize="@dimen/dimen_11dp_sw_320_dp"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_name_layout_channel_category_item"
+        android:paddingTop="@dimen/dimen_4dp_sw_320_dp"
+        android:paddingBottom="@dimen/dimen_4dp_sw_320_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:singleLine="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iv_category_playing"/>
+</RelativeLayout>

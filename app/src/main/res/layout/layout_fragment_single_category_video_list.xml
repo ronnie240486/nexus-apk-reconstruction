@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.media.ViviTV.view.FilterLayoutV2
+        android:id="@+id/rl_filter_layout_fragment_single_category_video_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_6dp_sw_320_dp"
+        android:layout_below="@+id/rl_filter_layout_fragment_single_category_video_list"
+        layout="@layout/layout_fragment_base_video_list"/>
+</RelativeLayout>

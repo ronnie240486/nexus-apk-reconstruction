@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?attr/backgroundVideoDetailsVideoSetItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dimen_24dp_sw_320_dp">
+    <TextView
+        android:textSize="@dimen/dimen_14sp_sw_320_dp"
+        android:textColor="?attr/colorVideoDetailsVideoSetName"
+        android:gravity="center"
+        android:id="@+id/tv_set_name_layout_video_episode_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/ic_bg_tv_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/dimen_18sp_sw_320_dp"
+        android:textColor="#dddddc"
+        android:gravity="center_vertical"
+        android:id="@+id/Ebook_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp_sw_320_dp"
+        android:layout_marginLeft="@dimen/dimen_30dp_sw_320_dp"
+        android:text="@string/ebook_top_tip"
+        android:layout_weight="1"/>
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_25dp_sw_320_dp"
+        android:layout_marginRight="@dimen/dimen_25dp_sw_320_dp">
+        <RadioGroup
+            android:orientation="horizontal"
+            android:id="@+id/top_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40dp_sw_320_dp"
+            android:layout_weight="1"/>
+    </HorizontalScrollView>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ebook_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"/>
+</LinearLayout>

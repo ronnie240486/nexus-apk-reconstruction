@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:descendantFocusability="afterDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10dp_sw_320_dp"
+        android:maxLines="1"
+        android:singleLine="true"/>
+    <org.lucasr.twowayview.widget.TwoWayView
+        android:id="@+id/two_way_view_videos"
+        android:focusable="true"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:descendantFocusability="afterDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        app:twowayview_layoutManager="ListLayoutManager"
+        style="@style/TwoWayView"/>
+</RelativeLayout>

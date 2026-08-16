@@ -1,0 +1,16 @@
+package p000;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/* JADX INFO: renamed from: iD */
+/* JADX INFO: loaded from: classes.dex */
+@Inherited
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface InterfaceC4526iD {
+    String value();
+}

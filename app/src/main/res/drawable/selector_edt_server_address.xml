@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <padding
+                android:left="@dimen/dimen_8dp_sw_320_dp"
+                android:top="@dimen/dimen_2dp_sw_320_dp"
+                android:right="@dimen/dimen_2dp_sw_320_dp"
+                android:bottom="@dimen/dimen_2dp_sw_320_dp"/>
+            <solid android:color="#989898"/>
+            <corners android:radius="@dimen/dimen_4dp_sw_320_dp"/>
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape>
+            <padding
+                android:left="@dimen/dimen_8dp_sw_320_dp"
+                android:top="@dimen/dimen_2dp_sw_320_dp"
+                android:right="@dimen/dimen_2dp_sw_320_dp"
+                android:bottom="@dimen/dimen_2dp_sw_320_dp"/>
+            <solid android:color="#ffffff"/>
+            <corners android:radius="@dimen/dimen_4dp_sw_320_dp"/>
+            <stroke
+                android:width="@dimen/dimen_2dp_sw_320_dp"
+                android:color="#2196f3"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:left="@dimen/dimen_8dp_sw_320_dp"
+                android:top="@dimen/dimen_2dp_sw_320_dp"
+                android:right="@dimen/dimen_2dp_sw_320_dp"
+                android:bottom="@dimen/dimen_2dp_sw_320_dp"/>
+            <solid android:color="#ffffff"/>
+            <corners android:radius="@dimen/dimen_4dp_sw_320_dp"/>
+        </shape>
+    </item>
+</selector>

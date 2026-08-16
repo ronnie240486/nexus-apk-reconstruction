@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/dimen_15dp_sw_320_dp"
+    android:textColor="@color/black"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical"
+    android:id="@+id/tv_name_layout_channel_category_item"
+    android:paddingLeft="18dp"
+    android:paddingTop="16dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="16dp"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dimen_50dp_sw_320_dp"
+    android:text="@string/app_name"
+    android:singleLine="true"/>

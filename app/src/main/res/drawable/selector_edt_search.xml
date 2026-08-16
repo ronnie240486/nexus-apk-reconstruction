@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="#ffffff"/>
+            <corners android:radius="@dimen/dimen_20dp_sw_320_dp"/>
+            <stroke
+                android:width="@dimen/dimen_1dp_sw_320_dp"
+                android:color="#f6f6f6"/>
+            <padding
+                android:left="@dimen/dimen_10dp_sw_320_dp"
+                android:top="@dimen/dimen_4dp_sw_320_dp"
+                android:right="@dimen/dimen_6dp_sw_320_dp"
+                android:bottom="@dimen/dimen_4dp_sw_320_dp"/>
+            <size
+                android:height="@dimen/dimen_20dp_sw_320_dp"
+                android:width="@dimen/dimen_40dp_sw_320_dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#ffffff"/>
+            <corners android:radius="@dimen/dimen_20dp_sw_320_dp"/>
+            <stroke
+                android:width="0.4dp"
+                android:color="#f6f6f6"/>
+            <padding
+                android:left="@dimen/dimen_10dp_sw_320_dp"
+                android:top="@dimen/dimen_4dp_sw_320_dp"
+                android:right="@dimen/dimen_6dp_sw_320_dp"
+                android:bottom="@dimen/dimen_4dp_sw_320_dp"/>
+            <size
+                android:height="@dimen/dimen_20dp_sw_320_dp"
+                android:width="@dimen/dimen_40dp_sw_320_dp"/>
+        </shape>
+    </item>
+</selector>

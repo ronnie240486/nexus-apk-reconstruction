@@ -1,0 +1,14 @@
+package p000;
+
+import java.nio.file.LinkOption;
+import java.nio.file.Path;
+
+/* JADX INFO: renamed from: hk */
+/* JADX INFO: loaded from: classes2.dex */
+public final /* synthetic */ class C4496hk {
+    /* JADX WARN: Invalid debug info offset */
+    /* JADX INFO: renamed from: a */
+    public static /* bridge */ /* synthetic */ boolean m21123a(Path path, LinkOption[] linkOptionArr) {
+        return false;
+    }
+}

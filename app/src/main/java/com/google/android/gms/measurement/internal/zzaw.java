@@ -1,0 +1,51 @@
+package com.google.android.gms.measurement.internal;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.google.android.gms.common.internal.Preconditions;
+import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
+
+/* JADX INFO: loaded from: classes2.dex */
+@SafeParcelable.Class(creator = "EventParcelCreator")
+@SafeParcelable.Reserved({1})
+public final class zzaw extends AbstractSafeParcelable {
+    public static final Parcelable.Creator<zzaw> CREATOR = new zzax();
+
+    @SafeParcelable.Field(m17610id = 2)
+    public final String zza;
+
+    @SafeParcelable.Field(m17610id = 3)
+    public final zzau zzb;
+
+    @SafeParcelable.Field(m17610id = 4)
+    public final String zzc;
+
+    @SafeParcelable.Field(m17610id = 5)
+    public final long zzd;
+
+    public zzaw(zzaw zzawVar, long j) {
+        Preconditions.checkNotNull(zzawVar);
+        this.zza = zzawVar.zza;
+        this.zzb = zzawVar.zzb;
+        this.zzc = zzawVar.zzc;
+        this.zzd = j;
+    }
+
+    public final String toString() {
+        return "origin=" + this.zzc + ",name=" + this.zza + ",params=" + String.valueOf(this.zzb);
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        zzax.zza(this, parcel, i);
+    }
+
+    @SafeParcelable.Constructor
+    public zzaw(@SafeParcelable.Param(m17611id = 2) String str, @SafeParcelable.Param(m17611id = 3) zzau zzauVar, @SafeParcelable.Param(m17611id = 4) String str2, @SafeParcelable.Param(m17611id = 5) long j) {
+        this.zza = str;
+        this.zzb = zzauVar;
+        this.zzc = str2;
+        this.zzd = j;
+    }
+}

@@ -1,0 +1,92 @@
+package com.google.android.gms.measurement.internal;
+
+import android.content.ServiceConnection;
+import android.net.Uri;
+import android.os.Bundle;
+import com.google.android.gms.common.stats.ConnectionTracker;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import p000.AbstractC4717l6;
+import p000.C4327f4;
+import p000.C4391g4;
+import p000.e70;
+
+/* JADX INFO: loaded from: classes2.dex */
+final class zzex implements Runnable {
+    final /* synthetic */ com.google.android.gms.internal.measurement.zzbr zza;
+    final /* synthetic */ ServiceConnection zzb;
+    final /* synthetic */ zzey zzc;
+
+    public zzex(zzey zzeyVar, com.google.android.gms.internal.measurement.zzbr zzbrVar, ServiceConnection serviceConnection) {
+        this.zzc = zzeyVar;
+        this.zza = zzbrVar;
+        this.zzb = serviceConnection;
+    }
+
+    @Override // java.lang.Runnable
+    public final void run() {
+        zzfr zzfrVar;
+        String str;
+        zzey zzeyVar = this.zzc;
+        zzez zzezVar = zzeyVar.zza;
+        String str2 = zzeyVar.zzb;
+        com.google.android.gms.internal.measurement.zzbr zzbrVar = this.zza;
+        ServiceConnection serviceConnection = this.zzb;
+        zzezVar.zza.zzaz().zzg();
+        Bundle bundle = new Bundle();
+        bundle.putString("package_name", str2);
+        Bundle bundle2 = null;
+        try {
+            Bundle bundleZzd = zzbrVar.zzd(bundle);
+            if (bundleZzd == null) {
+                zzezVar.zza.zzay().zzd().zza("Install Referrer Service returned a null response");
+            } else {
+                bundle2 = bundleZzd;
+            }
+        } catch (Exception e) {
+            zzezVar.zza.zzay().zzd().zzb("Exception occurred while retrieving the Install Referrer", e.getMessage());
+        }
+        zzezVar.zza.zzaz().zzg();
+        zzfr.zzO();
+        if (bundle2 != null) {
+            long j = bundle2.getLong("install_begin_timestamp_seconds", 0L) * 1000;
+            if (j == 0) {
+                C4391g4.m20722a(zzezVar.zza, "Service response is missing Install Referrer install timestamp");
+            } else {
+                String string = bundle2.getString("install_referrer");
+                if (string == null || string.isEmpty()) {
+                    zzfrVar = zzezVar.zza;
+                    str = "No referrer defined in Install Referrer response";
+                } else {
+                    zzezVar.zza.zzay().zzj().zzb("InstallReferrer API result", string);
+                    Bundle bundleZzs = zzezVar.zza.zzv().zzs(Uri.parse(AbstractC4717l6.f14991e.concat(string)));
+                    if (bundleZzs == null) {
+                        zzfrVar = zzezVar.zza;
+                        str = "No campaign params defined in Install Referrer result";
+                    } else {
+                        String string2 = bundleZzs.getString(FirebaseAnalytics.Param.MEDIUM);
+                        if (string2 != null && !"(not set)".equalsIgnoreCase(string2) && !"organic".equalsIgnoreCase(string2)) {
+                            long j2 = bundle2.getLong("referrer_click_timestamp_seconds", 0L) * 1000;
+                            if (j2 == 0) {
+                                zzfrVar = zzezVar.zza;
+                                str = "Install Referrer is missing click timestamp for ad campaign";
+                            } else {
+                                bundleZzs.putLong("click_timestamp", j2);
+                            }
+                        }
+                        if (j == zzezVar.zza.zzm().zzd.zza()) {
+                            e70.m20045a(zzezVar.zza, "Logging Install Referrer campaign from module while it may have already been logged.");
+                        }
+                        if (zzezVar.zza.zzJ()) {
+                            zzezVar.zza.zzm().zzd.zzb(j);
+                            zzezVar.zza.zzay().zzj().zzb("Logging Install Referrer campaign from gmscore with ", "referrer API v2");
+                            bundleZzs.putString("_cis", "referrer API v2");
+                            zzezVar.zza.zzq().zzF("auto", "_cmp", bundleZzs, str2);
+                        }
+                    }
+                }
+                C4327f4.m20229a(zzfrVar, str);
+            }
+        }
+        ConnectionTracker.getInstance().unbindService(zzezVar.zza.zzau(), serviceConnection);
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/dimen_8sp_sw_320_dp"
+    android:textColor="@color/text_color_album_item"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical"
+    android:id="@+id/tv_name_layout_album_list_item"
+    android:paddingLeft="@dimen/dimen_6dp_sw_320_dp"
+    android:paddingTop="@dimen/dimen_8dp_sw_320_dp"
+    android:paddingRight="@dimen/dimen_6dp_sw_320_dp"
+    android:paddingBottom="@dimen/dimen_8dp_sw_320_dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/app_name"
+    android:singleLine="true"/>

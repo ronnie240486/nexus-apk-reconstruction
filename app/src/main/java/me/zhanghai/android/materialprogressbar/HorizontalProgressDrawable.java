@@ -1,0 +1,56 @@
+package me.zhanghai.android.materialprogressbar;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff;
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class HorizontalProgressDrawable extends BaseProgressLayerDrawable<SingleHorizontalProgressDrawable, HorizontalProgressBackgroundDrawable> {
+    /* JADX WARN: Invalid debug info offset */
+    public HorizontalProgressDrawable(Context context) {
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @Override // me.zhanghai.android.materialprogressbar.BaseProgressLayerDrawable, me.zhanghai.android.materialprogressbar.ShowBackgroundDrawable
+    public /* bridge */ /* synthetic */ boolean getShowBackground() {
+        return false;
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @Override // me.zhanghai.android.materialprogressbar.BaseProgressLayerDrawable, me.zhanghai.android.materialprogressbar.IntrinsicPaddingDrawable
+    public /* bridge */ /* synthetic */ boolean getUseIntrinsicPadding() {
+        return false;
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @Override // me.zhanghai.android.materialprogressbar.BaseProgressLayerDrawable, me.zhanghai.android.materialprogressbar.ShowBackgroundDrawable
+    public /* bridge */ /* synthetic */ void setShowBackground(boolean z) {
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @Override // me.zhanghai.android.materialprogressbar.BaseProgressLayerDrawable, android.graphics.drawable.Drawable, me.zhanghai.android.materialprogressbar.TintableDrawable
+    @SuppressLint({"NewApi"})
+    public /* bridge */ /* synthetic */ void setTint(@ColorInt int i) {
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @Override // me.zhanghai.android.materialprogressbar.BaseProgressLayerDrawable, android.graphics.drawable.LayerDrawable, android.graphics.drawable.Drawable, me.zhanghai.android.materialprogressbar.TintableDrawable
+    @SuppressLint({"NewApi"})
+    public /* bridge */ /* synthetic */ void setTintList(@Nullable ColorStateList colorStateList) {
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @Override // me.zhanghai.android.materialprogressbar.BaseProgressLayerDrawable, android.graphics.drawable.Drawable, me.zhanghai.android.materialprogressbar.TintableDrawable
+    @SuppressLint({"NewApi"})
+    public /* bridge */ /* synthetic */ void setTintMode(@NonNull PorterDuff.Mode mode) {
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    @Override // me.zhanghai.android.materialprogressbar.BaseProgressLayerDrawable, me.zhanghai.android.materialprogressbar.IntrinsicPaddingDrawable
+    public /* bridge */ /* synthetic */ void setUseIntrinsicPadding(boolean z) {
+    }
+}

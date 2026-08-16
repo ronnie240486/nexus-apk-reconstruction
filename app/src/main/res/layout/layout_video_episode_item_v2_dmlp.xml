@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_4dp_sw_320_dp"
+        app:cardCornerRadius="@dimen/dimen_4dp_sw_320_dp"
+        app:cardElevation="@dimen/dimen_2dp_sw_320_dp">
+        <TextView
+            android:textSize="@dimen/dimen_14sp_sw_320_dp"
+            android:textColor="?attr/colorVideoDetailsVideoSetName"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:id="@+id/tv_set_name_layout_video_episode_item"
+            android:background="@color/white"
+            android:layout_width="@dimen/dimen_144dp_sw_320_dp"
+            android:layout_height="@dimen/dimen_90dp_sw_320_dp"
+            android:maxLines="3"
+            android:layout_centerInParent="true"
+            android:paddingStart="@dimen/dimen_8dp_sw_320_dp"
+            android:paddingEnd="@dimen/dimen_8dp_sw_320_dp"/>
+        <TextView
+            android:textSize="@dimen/dimen_8sp_sw_320_dp"
+            android:textColor="#784f0e"
+            android:layout_gravity="end"
+            android:id="@+id/tv_video_episode_vip"
+            android:background="@drawable/bg_video_episode_vip_bg"
+            android:paddingTop="@dimen/dimen_1dp_sw_320_dp"
+            android:paddingBottom="@dimen/dimen_1dp_sw_320_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIP"
+            android:paddingStart="@dimen/dimen_6dp_sw_320_dp"
+            android:paddingEnd="@dimen/dimen_6dp_sw_320_dp"
+            android:layout_alignEnd="@+id/tv_set_name_layout_video_episode_item"/>
+    </androidx.appcompat.widget.CardView>
+</RelativeLayout>

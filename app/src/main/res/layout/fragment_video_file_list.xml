@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_search_result"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="@dimen/dimen_10dp_sw_320_dp"
+        android:verticalSpacing="@dimen/dimen_12dp_sw_320_dp"
+        android:numColumns="@integer/search_result_column_count"/>
+    <TextView
+        android:textSize="@dimen/searchNew_bigFontSize"
+        android:textColor="?attr/colorSearchNoResultTipsText"
+        android:gravity="center"
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_empty_text"
+        android:layout_centerInParent="true"/>
+    <include
+        android:id="@+id/layout_loading_indicator"
+        android:layout_width="@dimen/dimen_60dp_sw_320_dp"
+        android:layout_height="@dimen/dimen_60dp_sw_320_dp"
+        android:layout_centerInParent="true"
+        layout="@layout/player_buf_pro"/>
+</RelativeLayout>

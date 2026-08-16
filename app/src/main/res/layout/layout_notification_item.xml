@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fixedWHRadioImageView="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/selector_bg_notification_item"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.media.view.FixedWHRatioImageView
+        android:id="@+id/iv_main_layout_notification_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fixedWHRadioImageView:ratio="1"/>
+</RelativeLayout>

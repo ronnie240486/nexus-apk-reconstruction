@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/dimen_8sp_sw_320_dp"
+    android:textColor="?attr/colorVideoTypeItem"
+    android:ellipsize="marquee"
+    android:gravity="start"
+    android:id="@+id/tv_category_name_layout_type_details_category_item"
+    android:background="@drawable/selector_bg_video_type_item_rectangel"
+    android:paddingTop="@dimen/dimen_4dp_sw_320_dp"
+    android:paddingBottom="@dimen/dimen_4dp_sw_320_dp"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_30dp_sw_320_dp"
+    android:button="@null"
+    android:minWidth="@dimen/type_details_left_category_width"
+    android:singleLine="true"
+    android:paddingStart="@dimen/dimen_6dp_sw_320_dp"/>

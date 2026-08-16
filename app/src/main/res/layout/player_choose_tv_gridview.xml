@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.media.view.ExpendGridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/player_choose_tv_gridView"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:scrollbars="none"
+    android:layout_width="@dimen/playChooseTvGridview_width"
+    android:layout_height="@dimen/playChooseTvGridview_height"
+    android:horizontalSpacing="@dimen/playChooseTvGridview_horizontalSpacing"
+    android:verticalSpacing="@dimen/playChooseTvGridview_verticalSpacing"
+    android:numColumns="5"/>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?attr/backgroundOttActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/dimen_16dp_sw_320_dp"
+        android:textColor="?attr/colorLanguageText"
+        android:id="@+id/tv_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_25dp_sw_320_dp"
+        android:text="@string/select_language"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingExtra="@dimen/dimen_8dp_sw_320_dp"/>
+    <ListView
+        android:id="@+id/lv_language"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none"
+        android:descendantFocusability="afterDescendants"
+        android:layout_width="@dimen/dimen_200dp_sw_320_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp_sw_320_dp"
+        android:listSelector="?attr/listSelectorLanguageListItem"
+        android:divider="@drawable/drawable_category_channel_item_normal"
+        android:dividerHeight="@dimen/dimen_1dp_sw_320_dp"
+        android:layout_below="@+id/tv_language"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

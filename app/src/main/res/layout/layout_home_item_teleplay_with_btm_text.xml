@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:RoundedImageView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_main"
+    android:background="@drawable/selector_home_recycler_item"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.makeramen.roundedimageview.RoundedImageViewFixWHR
+        android:id="@+id/iv_main_layout_home_item_teleplay_with_btm_text"
+        android:background="@drawable/selector_home_recycler_item"
+        android:duplicateParentState="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        RoundedImageView:riv_corner_radius="@dimen/dimen_4dp_sw_320_dp"/>
+    <TextView
+        android:textSize="@dimen/typeDetailsItem_videoBanBen_fontSize"
+        android:textColor="@color/white_99"
+        android:id="@+id/tv_grade_layout_home_item_teleplay_with_btm_text"
+        android:background="@drawable/drawable_bg_black_shallow_transparent"
+        android:paddingLeft="@dimen/dimen_4dp_sw_320_dp"
+        android:paddingRight="@dimen/dimen_4dp_sw_320_dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_2dp_sw_320_dp"
+        android:layout_alignBottom="@+id/iv_main_layout_home_item_teleplay_with_btm_text"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:textSize="@dimen/dimen_9dp_sw_320_dp"
+        android:textColor="?attr/colorHomeDisplayItemTitle"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_tittle_layout_home_item_teleplay_with_btm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:lines="1"
+        android:layout_below="@+id/iv_main_layout_home_item_teleplay_with_btm_text"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:marqueeRepeatLimit="marquee_forever"/>
+</RelativeLayout>

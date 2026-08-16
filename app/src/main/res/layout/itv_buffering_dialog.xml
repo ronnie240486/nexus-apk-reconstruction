@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/itvLoadingDialog_padding"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/dimen_10sp_sw_320_dp"
+        android:textColor="?attr/colorVideoAlbumBufferingName"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/buffering_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loading_tv"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/buffering_img"
+        android:layout_width="@dimen/itvLoadingDialog_img_width"
+        android:layout_height="@dimen/itvLoadingDialog_img_height"
+        android:src="@drawable/player_progress_img"/>
+    <TextView
+        android:textSize="@dimen/dimen_8sp_sw_320_dp"
+        android:textColor="?attr/colorVideoAlbumBufferingName"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/buffering_speed"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.8M/s"/>
+</LinearLayout>

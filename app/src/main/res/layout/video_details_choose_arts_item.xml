@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/videoDetailsChooseArts_item_fontSize"
+    android:textColor="@drawable/art_item_textcolor_selector"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical"
+    android:id="@+id/text"
+    android:background="@drawable/live_channel_list_item_bg"
+    android:paddingLeft="@dimen/videoDetailsChooseArts_item_paddingLeft"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/videoDetailsChooseArts_item_margin"
+    android:singleLine="true"
+    android:marqueeRepeatLimit="marquee_forever"/>

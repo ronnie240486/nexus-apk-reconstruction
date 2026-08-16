@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.media.ViviTV.widget.EnhancedMarqueeTextView
+        android:textSize="@dimen/dimen_18dp_sw_320_dp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:lines="1"
+        android:singleLine="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"/>
+</LinearLayout>

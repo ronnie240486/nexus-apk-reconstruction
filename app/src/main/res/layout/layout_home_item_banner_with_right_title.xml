@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.media.ViviTV.widget.ExtendedRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:Banner="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_main"
+    android:background="@drawable/selector_home_recycler_item_banner_with_title"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.youth.banner.Banner
+            android:id="@+id/banner_home_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="68"
+            Banner:indicator_drawable_selected="@drawable/drawable_indicator_selected"
+            Banner:indicator_drawable_unselected="@drawable/drawable_indicator_normal"/>
+        <RadioGroup
+            android:orientation="vertical"
+            android:id="@+id/rg_banner_title_list"
+            android:background="@drawable/selector_bg_banner_title_rv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider_banner_title_list"
+            android:layout_weight="32"
+            android:showDividers="middle"/>
+    </LinearLayout>
+</android.media.ViviTV.widget.ExtendedRelativeLayout>

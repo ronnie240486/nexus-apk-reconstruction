@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:PageIndicatorView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.p010rd.PageIndicatorView
+        android:id="@+id/page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_4dp_sw_320_dp"
+        android:layout_alignBottom="@+id/vp_main"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        PageIndicatorView:piv_animationType="none"
+        PageIndicatorView:piv_selectedColor="@color/theme_highlight"
+        PageIndicatorView:piv_unselectedColor="#343441"/>
+</RelativeLayout>

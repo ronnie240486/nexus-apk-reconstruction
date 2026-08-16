@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.media.ViviTV.widget.EnhancedMarqueeTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="16sp"
+    android:textColor="#ffffff"
+    android:ellipsize="none"
+    android:id="@+id/tv_text_ad_content_layout_text_ad"
+    android:background="@drawable/selector_bg_text_ad"
+    android:focusable="true"
+    android:clickable="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxLines="1"
+    android:singleLine="true"/>

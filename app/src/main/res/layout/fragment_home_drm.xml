@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/dimen_18dp_sw_320_dp"
+    android:paddingRight="@dimen/dimen_18dp_sw_320_dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.media.ViviTV.view.FilterLayoutV2
+        android:id="@+id/filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp_sw_320_dp"/>
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_8dp_sw_320_dp"
+        android:layout_below="@+id/filter_layout"/>
+    <org.lucasr.twowayview.widget.TwoWayView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_two_way_view_home_item_fragment"
+        android:paddingLeft="@dimen/dimen_30dp_sw_320_dp"
+        android:paddingTop="@dimen/dimen_10dp_sw_320_dp"
+        android:paddingRight="@dimen/dimen_30dp_sw_320_dp"
+        android:paddingBottom="@dimen/dimen_10dp_sw_320_dp"
+        android:visibility="gone"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:twowayview_layoutManager="SpannableGridLayoutManager"
+        app:twowayview_numColumns="120"
+        app:twowayview_numRows="60"
+        style="@style/TwoWayView"/>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+    </style>
+    <style name="Player_buf_pro" parent="">
+        <item name="android:maxWidth">80dp</item>
+        <item name="android:maxHeight">80dp</item>
+        <item name="android:indeterminate">false</item>
+        <item name="android:indeterminateDrawable">@drawable/player_progress_img</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:minHeight">80dp</item>
+    </style>
+    <style name="TextOnMainLayout" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">4</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:layout_gravity">0x50</item>
+        <item name="android:focusable">true</item>
+        <item name="android:visibility">1</item>
+        <item name="android:text">离线模式</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:marqueeRepeatLimit">-1</item>
+    </style>
+    <style name="TextOnMainLayout_new" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">4</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:marqueeRepeatLimit">-1</item>
+    </style>
+    <style name="search_keybord_bottombtn" parent="">
+        <item name="android:layout_width">88dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:layout_margin">@dimen/searchNew_keybordFull_margin</item>
+    </style>
+    <style name="search_top" parent="">
+        <item name="android:textSize">11dp</item>
+        <item name="android:textColor">@drawable/menu_textcolor_selector</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:layout_gravity">0x50</item>
+        <item name="android:background">@drawable/search_top_sel</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+    </style>
+</resources>

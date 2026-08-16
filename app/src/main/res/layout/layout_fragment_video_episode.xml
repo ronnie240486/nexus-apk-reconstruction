@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/dimen_14sp_sw_320_dp"
+        android:textColor="?attr/colorVideoDetailsSectionTitle"
+        android:id="@+id/tv_title_layout_fragment_video_episode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <GridView
+        android:id="@+id/gv_main_layout_fragment_video_episode"
+        android:scrollbars="none"
+        android:descendantFocusability="afterDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_16dp_sw_320_dp"
+        android:layout_marginRight="@dimen/dimen_6dp_sw_320_dp"
+        android:horizontalSpacing="@dimen/dimen_16dp_sw_320_dp"
+        android:verticalSpacing="@dimen/dimen_14dp_sw_320_dp"
+        android:numColumns="7"
+        android:layout_below="@+id/tv_title_layout_fragment_video_episode"/>
+</RelativeLayout>

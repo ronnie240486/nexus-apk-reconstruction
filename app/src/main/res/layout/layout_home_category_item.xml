@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/dimen_12sp_sw_320_dp"
+    android:textColor="@drawable/bg_home_category_item_kids"
+    android:gravity="center"
+    android:id="@+id/rb_title"
+    android:paddingLeft="@dimen/dimen_8dp_sw_320_dp"
+    android:paddingRight="@dimen/dimen_8dp_sw_320_dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:button="@null"
+    android:maxLines="1"
+    android:singleLine="true"
+    android:layout_weight="1"/>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@drawable/filter_bg_selector"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/srt_set_item_gou"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/srtSetItem_margin"
+        android:src="@drawable/fliter_gou"/>
+    <TextView
+        android:textSize="@dimen/srtSetItem_fontSize"
+        android:textColor="@color/white"
+        android:ellipsize="marquee"
+        android:gravity="left"
+        android:id="@+id/srt_set_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"/>
+</LinearLayout>

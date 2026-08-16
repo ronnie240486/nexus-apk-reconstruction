@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OttTheme.Base.Normal" parent="@style/OttTheme.Base">
+        <item name="android:windowFullscreen">false</item>
+        <item name="colorHomeDisplayItemGrade">#fc5542</item>
+        <item name="colorHomeDisplayItemTitle">#444</item>
+        <item name="colorPlayHistoryItemTitle">@drawable/color_history_item_vname_port</item>
+        <item name="colorVideoDetailsVideoSetName">#333</item>
+    </style>
+    <style name="TwoWayView" parent="@style/TwoWayViewBase">
+        <item name="android:orientation">1</item>
+        <item name="android:scrollbars">0x200</item>
+    </style>
+    <style name="style_title_bar_bottom_divider" parent="">
+        <item name="android:background">@color/appline</item>
+        <item name="android:visibility">2</item>
+        <item name="android:layout_marginTop">@dimen/dimen_10dp_sw_320_dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="style_title_bar_center_title" parent="">
+        <item name="android:textSize">@dimen/dimen_16dp_sw_320_dp</item>
+        <item name="android:textColor">#343434</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="style_title_bar_container" parent="">
+        <item name="android:background">#fdfdfd</item>
+        <item name="android:paddingTop">@dimen/dimen_12dp_sw_320_dp</item>
+        <item name="android:layout_width">-1</item>
+        <item name="android:layout_height">@dimen/dimen_50dp_sw_320_dp</item>
+    </style>
+    <style name="style_title_bar_left_btn" parent="">
+        <item name="android:textSize">@dimen/dimen_14sp_sw_320_dp</item>
+        <item name="android:textColor">@color/text_color_base_text_view</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginLeft">@dimen/dimen_18dp_sw_320_dp</item>
+        <item name="android:minWidth">@dimen/dimen_40dp_sw_320_dp</item>
+        <item name="android:minHeight">@dimen/dimen_30dp_sw_320_dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+</resources>

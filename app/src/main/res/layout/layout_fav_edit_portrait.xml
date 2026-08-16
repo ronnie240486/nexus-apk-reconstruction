@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/dimen_16dp_sw_320_dp"
+    android:textColor="#b2b2b2"
+    android:id="@+id/tv_edit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dimen_18dp_sw_320_dp"
+    android:text="@string/edit"
+    android:layout_alignParentRight="true"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"/>

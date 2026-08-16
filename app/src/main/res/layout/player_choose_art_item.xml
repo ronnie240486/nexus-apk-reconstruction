@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/playChooseArtItem_fontSize"
+    android:textColor="@color/channel_list_item_text"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@+id/player_choose_text"
+    android:background="@drawable/menu_bg_selector"
+    android:paddingLeft="@dimen/playChooseArtItem_paddingLeft"
+    android:layout_width="@dimen/playChooseArtItem_width"
+    android:layout_height="@dimen/playChooseArtItem_height"
+    android:singleLine="true"
+    android:marqueeRepeatLimit="marquee_forever"/>

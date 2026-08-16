@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_custom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/dimen_18dp_sw_320_dp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorVideoFavEmpty"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_25dp_sw_320_dp"
+        android:layout_marginTop="@dimen/dimen_25dp_sw_320_dp"/>
+    <org.lucasr.twowayview.widget.TwoWayView
+        android:id="@+id/main_two_way_view_home_item_fragment"
+        android:paddingLeft="@dimen/dimen_10dp_sw_320_dp"
+        android:paddingTop="@dimen/dimen_55dp_sw_320_dp"
+        android:paddingRight="@dimen/dimen_10dp_sw_320_dp"
+        android:paddingBottom="@dimen/dimen_10dp_sw_320_dp"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:twowayview_layoutManager="SpannableGridLayoutManager"
+        app:twowayview_numColumns="120"
+        app:twowayview_numRows="60"
+        style="@style/TwoWayView"/>
+    <TextView
+        android:textSize="@dimen/dimen_12sp_sw_320_dp"
+        android:textColor="?attr/colorVideoFavEmpty"
+        android:id="@+id/tv_empty_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

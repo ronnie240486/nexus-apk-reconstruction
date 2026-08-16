@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/dimen_14sp_sw_320_dp"
+    android:textColor="#ffffff"
+    android:id="@+id/btn_reload_layout_btn_reload"
+    android:background="@drawable/selector_button_default_theme"
+    android:paddingLeft="@dimen/dimen_12dp_sw_320_dp"
+    android:paddingTop="@dimen/dimen_4dp_sw_320_dp"
+    android:paddingRight="@dimen/dimen_12dp_sw_320_dp"
+    android:paddingBottom="@dimen/dimen_4dp_sw_320_dp"
+    android:focusable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/retry"
+    android:layout_centerInParent="true"/>

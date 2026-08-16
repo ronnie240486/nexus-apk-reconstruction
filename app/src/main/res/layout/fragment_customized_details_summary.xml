@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:RoundedImageView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_custom"
+    android:background="?attr/colorBackgroundLayout"
+    android:padding="@dimen/dimen_20dp_sw_320_dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/dimen_18dp_sw_320_dp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorVideoFavEmpty"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5dp_sw_320_dp"/>
+    <com.makeramen.roundedimageview.RoundedImageViewFixWHR
+        android:id="@+id/iv_introduce"
+        android:background="@drawable/img_corner_bg"
+        android:layout_width="@dimen/dimen_170dp_sw_320_dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/tv_name"
+        RoundedImageView:riv_corner_radius="@dimen/dimen_6dp_sw_320_dp"/>
+    <ScrollView
+        android:background="?attr/backgroundLayoutDescribe"
+        android:padding="@dimen/dimen_10dp_sw_320_dp"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_6dp_sw_320_dp"
+        android:layout_marginTop="@dimen/dimen_4dp_sw_320_dp"
+        android:layout_toRightOf="@+id/iv_introduce"
+        android:layout_below="@+id/tv_name">
+        <TextView
+            android:textSize="@dimen/dimen_12dp_sw_320_dp"
+            android:textColor="?attr/colorVideoFavEmpty"
+            android:id="@+id/tv_introduce_content"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+</RelativeLayout>

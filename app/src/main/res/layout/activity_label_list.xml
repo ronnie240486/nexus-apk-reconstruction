@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_main"
+    android:background="@drawable/ic_bg_tv_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_main_title_bar_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/rl_title_layout_activity_label_video_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_title_bar_common"/>
+    </RelativeLayout>
+    <ListView
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:id="@+id/lv_main"
+        android:padding="@dimen/dimen_16dp_sw_320_dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:descendantFocusability="afterDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"/>
+</RelativeLayout>

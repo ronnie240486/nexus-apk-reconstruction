@@ -1,0 +1,73 @@
+package com.google.android.gms.internal.measurement;
+
+import android.media.ViviTV.activity.VideoDetailsFragmentActivity;
+import org.dom4j.p020io.SAXEventRecorder;
+
+/* JADX INFO: loaded from: classes2.dex */
+final class zzmz {
+    public static /* bridge */ /* synthetic */ void zza(byte b, byte b2, byte b3, byte b4, char[] cArr, int i) throws zzkp {
+        if (!zze(b2)) {
+            if ((((b2 + 112) + (b << 28)) >> 30) == 0 && !zze(b3) && !zze(b4)) {
+                int i2 = ((b & 7) << 18) | ((b2 & 63) << 12) | ((b3 & 63) << 6) | (b4 & 63);
+                cArr[i] = (char) ((i2 >>> 10) + 55232);
+                cArr[i + 1] = (char) ((i2 & VideoDetailsFragmentActivity.f5472I) + 56320);
+                return;
+            }
+        }
+        throw zzkp.zzc();
+    }
+
+    /* JADX WARN: Code duplicated, block: B:10:0x0014 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:11:0x0016  */
+    /* JADX WARN: Code duplicated, block: B:12:0x0018 A[PHI: r2
+      0x0018: PHI (r2v3 byte) = (r2v2 byte), (r2v9 byte) binds: [B:9:0x0012, B:11:0x0016] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Code duplicated, block: B:14:0x001e  */
+    public static /* bridge */ /* synthetic */ void zzb(byte b, byte b2, byte b3, char[] cArr, int i) throws zzkp {
+        if (!zze(b2)) {
+            if (b != -32) {
+                if (b != -19) {
+                    if (!zze(b3)) {
+                        cArr[i] = (char) (((b & SAXEventRecorder.SAXEvent.f16649r) << 12) | ((b2 & 63) << 6) | (b3 & 63));
+                        return;
+                    }
+                } else if (b2 < -96) {
+                    b = -19;
+                    if (!zze(b3)) {
+                        cArr[i] = (char) (((b & SAXEventRecorder.SAXEvent.f16649r) << 12) | ((b2 & 63) << 6) | (b3 & 63));
+                        return;
+                    }
+                }
+            } else if (b2 >= -96) {
+                b = -32;
+                if (b != -19) {
+                    if (!zze(b3)) {
+                        cArr[i] = (char) (((b & SAXEventRecorder.SAXEvent.f16649r) << 12) | ((b2 & 63) << 6) | (b3 & 63));
+                        return;
+                    }
+                } else if (b2 < -96) {
+                    b = -19;
+                    if (!zze(b3)) {
+                        cArr[i] = (char) (((b & SAXEventRecorder.SAXEvent.f16649r) << 12) | ((b2 & 63) << 6) | (b3 & 63));
+                        return;
+                    }
+                }
+            }
+        }
+        throw zzkp.zzc();
+    }
+
+    public static /* bridge */ /* synthetic */ void zzc(byte b, byte b2, char[] cArr, int i) throws zzkp {
+        if (b < -62 || zze(b2)) {
+            throw zzkp.zzc();
+        }
+        cArr[i] = (char) (((b & 31) << 6) | (b2 & 63));
+    }
+
+    public static /* bridge */ /* synthetic */ boolean zzd(byte b) {
+        return b >= 0;
+    }
+
+    private static boolean zze(byte b) {
+        return b > -65;
+    }
+}

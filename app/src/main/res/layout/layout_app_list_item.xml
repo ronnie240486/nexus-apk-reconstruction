@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_app_icon_layout_app_list_item"
+        android:layout_width="@dimen/app_icon_size_app_list_item"
+        android:layout_height="@dimen/app_icon_size_app_list_item"
+        android:layout_marginTop="@dimen/dimen_6dp_sw_320_dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textSize="@dimen/text_size_app_name_app_layout"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:id="@+id/tv_app_name_layout_app_list_item"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_app_name_app_list_item"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_below="@+id/iv_app_icon_layout_app_list_item"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/iv_uninstall_mark_layout_app_list_item"
+        android:focusable="false"
+        android:layout_width="@dimen/dimen_10dp_sw_320_dp"
+        android:layout_height="@dimen/dimen_10dp_sw_320_dp"
+        android:layout_marginRight="@dimen/margin_top_app_name_app_list_item"
+        android:src="@drawable/ic_uninstall_mark"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

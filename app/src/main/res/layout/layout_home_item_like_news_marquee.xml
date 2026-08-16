@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:RoundedImageView="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/selector_home_recycler_item"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        RoundedImageView:riv_corner_radius="@dimen/dimen_4dp_sw_320_dp"/>
+    <com.sunfusheng.marqueeview.MarqueeView
+        android:ellipsize="end"
+        android:id="@+id/tv_brief"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_8dp_sw_320_dp"
+        android:layout_marginTop="@dimen/dimen_6dp_sw_320_dp"
+        android:layout_marginRight="@dimen/dimen_8dp_sw_320_dp"
+        android:layout_marginBottom="@dimen/dimen_6dp_sw_320_dp"
+        android:maxLines="2"
+        RoundedImageView:mvAnimDuration="1000"
+        RoundedImageView:mvDirection="bottom_to_top"
+        RoundedImageView:mvInterval="4000"
+        RoundedImageView:mvSingleLine="false"
+        RoundedImageView:mvTextColor="#ffffff"
+        RoundedImageView:mvTextSize="@dimen/dimen_10sp_sw_320_dp"/>
+    <TextView
+        android:textSize="@dimen/dimen_10sp_sw_320_dp"
+        android:textColor="?attr/colorHomeDisplayItemTitle"
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8dp_sw_320_dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

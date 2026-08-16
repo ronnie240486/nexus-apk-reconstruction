@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/dimen_12sp_sw_320_dp"
+    android:textColor="?attr/colorVideoDetailsSummary"
+    android:background="@drawable/selector_tag_button"
+    android:paddingLeft="@dimen/dimen_8dp_sw_320_dp"
+    android:paddingTop="@dimen/dimen_2dp_sw_320_dp"
+    android:paddingRight="@dimen/dimen_8dp_sw_320_dp"
+    android:paddingBottom="@dimen/dimen_2dp_sw_320_dp"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

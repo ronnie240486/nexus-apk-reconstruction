@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:RoundedImageView="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/dimen_12dp_sw_320_dp"
+    android:paddingRight="@dimen/dimen_12dp_sw_320_dp"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.makeramen.roundedimageview.RoundedImageViewFixWHR
+        android:id="@+id/iv_logo_layout_home_item_like_app"
+        android:background="@drawable/selector_bg_app_item"
+        android:duplicateParentState="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        RoundedImageView:riv_corner_radius="@dimen/dimen_12dp_sw_320_dp"
+        RoundedImageView:whr="1"/>
+    <TextView
+        android:textSize="@dimen/dimen_12sp_sw_320_dp"
+        android:textColor="?attr/colorHomeDisplayItemTitle"
+        android:gravity="center"
+        android:id="@+id/tv_title_layout_home_item_like_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp_sw_320_dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_below="@+id/iv_logo_layout_home_item_like_app"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="apk_md5_check_failed">새 버전을 다운로드하지 못했습니다. 앱 업그레이드는 다음에 열 때 다시 시도됩니다。</string>
+    <string name="check_update_error">업데이트 확인 중 오류 발생,</string>
+    <string name="check_update_error_check_network">업데이트 확인에 실패했습니다. 인터넷를 확인하십시오...</string>
+    <string name="file_not_exist">파일없습</string>
+    <string name="has_cancel_download">취소되</string>
+    <string name="has_no_wifi">현재 비WIFI 환경이며 업데이트는 데이터를 사용합니다</string>
+    <string name="is_newest_version">이미 최신 버전입니다, 이용해 주셔서 감사합니다</string>
+    <string name="not_now">업데이트 안함</string>
+    <string name="stop_download">다운로드 중지</string>
+    <string name="tip_background_downloading">새 버전을 백그라운드에서 다운로드 중입니다. 잠시후...</string>
+    <string name="tip_is_upgrading">업데이트 중. 잠시후...</string>
+    <string name="title_notification_update">새 버전 다운로드 중, 잠시 후 …</string>
+    <string name="title_update_dialog">제시</string>
+    <string name="update_now">지금 다운로드</string>
+</resources>

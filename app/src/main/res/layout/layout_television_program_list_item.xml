@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/dimen_12sp_sw_320_dp"
+    android:typeface="monospace"
+    android:textColor="#ffffff"
+    android:gravity="center"
+    android:id="@+id/tv_name_layout_television_program_list_item"
+    android:paddingLeft="@dimen/dimen_4dp_sw_320_dp"
+    android:paddingTop="@dimen/dimen_6dp_sw_320_dp"
+    android:paddingBottom="@dimen/dimen_6dp_sw_320_dp"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxLines="1"
+    android:singleLine="true"/>

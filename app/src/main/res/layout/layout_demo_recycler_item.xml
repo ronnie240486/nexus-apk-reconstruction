@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/twowayview_drawable_demo_bg_recycle_item"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_content_layout_demo_recycler_item"
+        android:background="@drawable/twowayview_drawable_demo_bg_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

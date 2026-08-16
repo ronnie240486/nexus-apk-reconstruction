@@ -1,0 +1,31 @@
+# Android / Gradle
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Assinaturas e segredos
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+.env
+.env.*
+keys/
+secrets/
+
+# Binários de distribuição
+*.apk
+*.aab
+*.apks
+*.xapk
+
+# Saídas locais de análise
+analysis/raw/
+analysis/tmp/
+*.log

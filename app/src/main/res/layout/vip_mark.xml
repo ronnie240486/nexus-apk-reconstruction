@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/dimen_8sp_sw_320_dp"
+    android:textColor="#ffffff"
+    android:gravity="center"
+    android:id="@+id/tv_vip_mark"
+    android:background="?attr/backgroundVideoListItem"
+    android:paddingLeft="@dimen/dimen_2dp_sw_320_dp"
+    android:paddingRight="@dimen/dimen_2dp_sw_320_dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_3dp_sw_320_dp"
+    android:layout_marginTop="@dimen/dimen_4dp_sw_320_dp"
+    android:layout_marginRight="@dimen/dimen_4dp_sw_320_dp"
+    android:text="VIP"
+    android:layout_alignParentRight="true"
+    android:alpha="0.8"/>

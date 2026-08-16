@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/filter_bg_selector"
+    android:layout_width="@dimen/typeDetails_filterItem_width"
+    android:layout_height="@dimen/typeDetails_filterItem_height">
+    <TextView
+        android:textSize="@dimen/typeDetails_filterItem_name_fontSize"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/filter_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:layout_gravity="left"
+        android:id="@+id/filter_gou"
+        android:visibility="invisible"
+        android:layout_width="@dimen/typeDetails_filterItem_gou_size"
+        android:layout_height="@dimen/typeDetails_filterItem_gou_size"
+        android:layout_marginLeft="@dimen/typeDetails_filterItem_gou_marginLeft"
+        android:src="@drawable/fliter_gou"/>
+</FrameLayout>

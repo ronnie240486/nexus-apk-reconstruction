@@ -1,0 +1,98 @@
+package org.bouncycastle.jce.provider.symmetric;
+
+import java.security.InvalidAlgorithmParameterException;
+import java.security.SecureRandom;
+import java.security.spec.AlgorithmParameterSpec;
+import java.util.HashMap;
+import org.bouncycastle.jce.provider.JCEBlockCipher;
+import org.bouncycastle.jce.provider.JCEKeyGenerator;
+import org.bouncycastle.jce.provider.JCEMac;
+import org.bouncycastle.jce.provider.JDKAlgorithmParameterGenerator;
+import org.bouncycastle.jce.provider.JDKAlgorithmParameters;
+import org.bouncycastle.jce.provider.WrapCipherSpi;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class AES {
+
+    public static class AESCMAC extends JCEMac {
+    }
+
+    public static class AlgParamGen extends JDKAlgorithmParameterGenerator {
+        /* JADX WARN: Invalid debug info offset */
+        /*  JADX ERROR: JadxRuntimeException in pass: BlockSplitter
+            jadx.core.utils.exceptions.JadxRuntimeException: Unexpected missing predecessor for block: B:4:0x0014
+            	at jadx.core.dex.visitors.blocks.BlockSplitter.addTempConnectionsForExcHandlers(BlockSplitter.java:280)
+            	at jadx.core.dex.visitors.blocks.BlockSplitter.visit(BlockSplitter.java:79)
+            */
+        @Override // java.security.AlgorithmParameterGeneratorSpi
+        public java.security.AlgorithmParameters engineGenerateParameters() {
+            /*
+                r3 = this;
+                r0 = 0
+                return r0
+            L25:
+            */
+            throw new UnsupportedOperationException("Method not decompiled: org.bouncycastle.jce.provider.symmetric.AES.AlgParamGen.engineGenerateParameters():java.security.AlgorithmParameters");
+        }
+
+        /* JADX WARN: Invalid debug info offset */
+        @Override // java.security.AlgorithmParameterGeneratorSpi
+        public void engineInit(AlgorithmParameterSpec algorithmParameterSpec, SecureRandom secureRandom) throws InvalidAlgorithmParameterException {
+        }
+    }
+
+    public static class AlgParams extends JDKAlgorithmParameters.IVAlgorithmParameters {
+        /* JADX WARN: Invalid debug info offset */
+        @Override // org.bouncycastle.jce.provider.JDKAlgorithmParameters.IVAlgorithmParameters, java.security.AlgorithmParametersSpi
+        public String engineToString() {
+            return null;
+        }
+    }
+
+    public static class CBC extends JCEBlockCipher {
+    }
+
+    public static class CFB extends JCEBlockCipher {
+    }
+
+    public static class ECB extends JCEBlockCipher {
+    }
+
+    public static class KeyGen extends JCEKeyGenerator {
+        /* JADX WARN: Invalid debug info offset */
+        public KeyGen() {
+        }
+
+        /* JADX WARN: Invalid debug info offset */
+        public KeyGen(int i) {
+        }
+    }
+
+    public static class KeyGen128 extends KeyGen {
+    }
+
+    public static class KeyGen192 extends KeyGen {
+    }
+
+    public static class KeyGen256 extends KeyGen {
+    }
+
+    public static class Mappings extends HashMap {
+        private static final String wrongAES128 = "2.16.840.1.101.3.4.2";
+        private static final String wrongAES192 = "2.16.840.1.101.3.4.22";
+        private static final String wrongAES256 = "2.16.840.1.101.3.4.42";
+    }
+
+    public static class OFB extends JCEBlockCipher {
+    }
+
+    public static class RFC3211Wrap extends WrapCipherSpi {
+    }
+
+    public static class Wrap extends WrapCipherSpi {
+    }
+
+    /* JADX WARN: Invalid debug info offset */
+    private AES() {
+    }
+}

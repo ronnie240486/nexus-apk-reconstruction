@@ -1,0 +1,9 @@
+package cn.dolit.DLBT;
+
+/* JADX INFO: loaded from: classes.dex */
+public enum DLBT_FILE_PRIORITIZE {
+    DLBT_FILE_PRIORITY_CANCEL,
+    DLBT_FILE_PRIORITY_NORMAL,
+    DLBT_FILE_PRIORITY_ABOVE_NORMAL,
+    DLBT_FILE_PRIORITY_MAX
+}

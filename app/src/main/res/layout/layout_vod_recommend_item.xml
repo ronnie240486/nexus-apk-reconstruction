@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/video_item"
+    android:background="@drawable/selector_bg_recommend_v2"
+    android:focusable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <net.soulwolf.widget.ratiolayout.widget.RatioImageView
+        android:id="@+id/iv_video_poster"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/default_film_img"
+        android:scaleType="centerCrop"
+        app:datumRatio="datumAuto"
+        app:layoutAspectRatio="1.36"/>
+    <ImageView
+        android:id="@+id/iv_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_youtube_source"
+        android:layout_alignLeft="@+id/iv_video_poster"
+        android:layout_alignTop="@+id/iv_video_poster"/>
+    <TextView
+        android:textSize="@dimen/dimen_6dp_sw_320_dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/tv_vip_mark"
+        android:background="?attr/backgroundVideoListItem"
+        android:padding="@dimen/dimen_2dp_sw_320_dp"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_3dp_sw_320_dp"
+        android:layout_marginTop="@dimen/dimen_2dp_sw_320_dp"
+        android:layout_marginRight="@dimen/dimen_2dp_sw_320_dp"
+        android:text="VIP"
+        android:layout_alignTop="@+id/iv_video_poster"
+        android:layout_alignRight="@+id/iv_video_poster"/>
+</RelativeLayout>
