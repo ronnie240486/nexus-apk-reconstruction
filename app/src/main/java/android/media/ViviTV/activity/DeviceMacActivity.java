@@ -15,8 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import android.media.ViviTV.Pre_launcher;
-
 /**
  * Tela substituta do login de usuário e senha.
  *
@@ -93,7 +91,8 @@ public class DeviceMacActivity extends Activity {
     }
 
     private void openOriginalEntryPoint() {
-        Intent intent = new Intent(this, Pre_launcher.class);
+        Intent intent = new Intent();
+        intent.setClassName(this, "android.media.ViviTV.activity.HomeActivity");
         intent.putExtra(DeviceIdentity.EXTRA_MAC, DeviceIdentity.getCompactMac(this));
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);

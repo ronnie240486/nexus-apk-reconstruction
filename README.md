@@ -51,3 +51,9 @@ A tela de usuário e senha foi substituída por uma tela que exibe o identificad
 O valor é derivado do `ANDROID_ID` do próprio Android por SHA-256, usando os primeiros 12 caracteres hexadecimais. Assim, o aplicativo não depende do MAC físico do Wi-Fi, que pode ser ocultado ou randomizado pelo sistema. O identificador deve ser cadastrado no painel normalizado, preferencialmente sem separadores (`001122334455`), mesmo que a tela o apresente com dois-pontos para facilitar a leitura.
 
 > A persistência após desinstalação e reinstalação é esperada no mesmo perfil do mesmo aparelho enquanto o `ANDROID_ID` permanecer igual. Ela não pode ser garantida depois de reset de fábrica, troca de perfil/usuário, alteração de assinatura ou políticas específicas do fabricante. O MAC físico real não é uma solução confiável para esse requisito em Android moderno.
+
+## APK de teste
+
+Foi gerada uma variante de teste `nexus-mac-test.apk` a partir do APK original, com o launcher apontando para a tela de identificação e o botão Continuar abrindo diretamente `HomeActivity`. O artefato é assinado com uma chave de desenvolvimento criada para testes e não deve ser usado para atualização sobre uma instalação assinada com outra chave. A assinatura de produção deverá ser feita com o keystore oficial do aplicativo.
+
+A reconstrução do restante do aplicativo foi mantida a partir dos DEX e recursos originais; por isso, esta variante deve ser validada em um dispositivo Android autorizado antes de qualquer distribuição. O APK final de teste é entregue como artefato da tarefa e não é versionado no Git devido à regra que bloqueia binários de distribuição.
