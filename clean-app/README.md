@@ -13,3 +13,7 @@ O MAC exibido é uma representação de 12 caracteres derivada do `ANDROID_ID` p
 ## Build
 
 O APK de teste foi compilado com `aapt2`, `javac`, D8/R8, `zipalign` e `apksigner`. A assinatura atual é de desenvolvimento; para distribuição, é necessário usar o keystore oficial do aplicativo. O código-fonte está em `src/main/java`, o manifesto em `AndroidManifest.xml` e os assets compiláveis em `res/drawable`.
+
+## Acervo visual ampliado
+
+A base agora inclui a biblioteca visual sanitizada recuperada do APK, com aproximadamente 1.170 imagens/ícones e 12 sons. Os arquivos executáveis, bibliotecas nativas e artefatos de proteção foram deliberadamente excluídos da biblioteca, pois não fazem parte de uma reconstrução limpa segura. O APK recompilado com esses recursos passa de 5 MB, refletindo o conteúdo visual incorporado.
