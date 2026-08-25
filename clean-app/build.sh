@@ -2,9 +2,9 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-BUILD_TOOLS="${ANDROID_BUILD_TOOLS:-/usr/lib/android-sdk/build-tools/debian}"
-ANDROID_JAR="${ANDROID_JAR:-/usr/lib/android-sdk/platforms/android-23/android.jar}"
-R8_JAR="${R8_JAR:-/home/ubuntu/work/tools/r8/r8.jar}"
+BUILD_TOOLS="${ANDROID_BUILD_TOOLS:-/home/ubuntu/android-sdk/build-tools/35.0.0}"
+ANDROID_JAR="${ANDROID_JAR:-/home/ubuntu/android-sdk/platforms/android-23/android.jar}"
+R8_JAR="${R8_JAR:-}"
 OUT="${OUT:-$ROOT/build}"
 
 rm -rf "$OUT"
@@ -30,7 +30,7 @@ javac -source 8 -target 8 -encoding UTF-8 \
   "$ROOT/src/main/java/cn/dolit/nexus/MainActivity.java"
 
 jar cf "$OUT/app.jar" -C "$OUT/classes" .
-java -cp "$R8_JAR" com.android.tools.r8.D8 \
+"$BUILD_TOOLS/d8" \
   --lib "$ANDROID_JAR" \
   --min-api 23 \
   --output "$OUT/dex" \
